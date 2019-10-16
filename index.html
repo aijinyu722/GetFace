@@ -39,6 +39,7 @@
         function success(stream) {
             //兼容webkit核心浏览器
             var CompatibleURL = window.URL || window.webkitURL;
+            alert(CompatibleURL);
             //将视频流转化为video的源
             mediaStreamTrack = stream;
             try {
