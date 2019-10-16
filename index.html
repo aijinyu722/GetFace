@@ -48,6 +48,8 @@
         }
         //错误回调函数
         function error(error) {
+            alert(error.name);
+            alert(error.message);
             console.log('访问用户媒体失败：', error.name, error.message);
         }
         function getUserMediaToPhoto(constraints, success, error) {
