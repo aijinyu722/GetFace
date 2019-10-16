@@ -46,7 +46,7 @@
                 video.src = CompatibleURL.createObjectURL(stream);
                 video.srcObject = stream;
             } catch (e) {
-                console.log("访问用户媒体设备失败：", error.name, error.message);
+                alert("访问用户媒体设备失败：", error.name, error.message);
             }
 
             video.play();//播放视频
