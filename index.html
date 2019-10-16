@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Face</title>
+    <style>
+        video,
+        canvas {
+            background: #ccc;
+        }
+    </style>
 </head>
 
 <body>
@@ -73,6 +79,7 @@
             this.img = canvas.toDataURL('image/jpg')
             //获取完整的base64编码
             this.img = img.split(',')[1];
+            alert(this.img)
             return this.img;
         }
         function openUserMedia() {
