@@ -38,12 +38,12 @@
         var mediaStreamTrack = null;
         function success(stream) {
             //兼容webkit核心浏览器
-            var CompatibleURL = window.URL || window.webkitURL;
-            alert(CompatibleURL);
+//             var CompatibleURL = window.URL || window.webkitURL;
+            alert(stream);
             //将视频流转化为video的源
             mediaStreamTrack = stream;
             try {
-                video.src = CompatibleURL.createObjectURL(stream);
+//                 video.src = CompatibleURL.createObjectURL(stream);
                 video.srcObject = stream;
             } catch (e) {
                 alert("访问用户媒体设备失败：", error.name, error.message);
@@ -80,7 +80,6 @@
             this.img = canvas.toDataURL('image/jpg')
             //获取完整的base64编码
             this.img = img.split(',')[1];
-            alert(this.img)
             return this.img;
         }
         function openUserMedia() {
@@ -95,10 +94,6 @@
                 mediaStreamTrack.getTracks()[0].stop();
         }
         openUserMedia()
-            getFace();
-        setInterval(() => {
-            getFace();
-        }, 3000);
 
     </script>
 </body>
