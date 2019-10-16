@@ -38,17 +38,16 @@
         var mediaStreamTrack = null;
         function success(stream) {
             //兼容webkit核心浏览器
-//             var CompatibleURL = window.URL || window.webkitURL;
-            alert(stream);
+            var CompatibleURL = window.URL || window.webkitURL;
             //将视频流转化为video的源
-            mediaStreamTrack = stream;
+//             mediaStreamTrack = stream;
             try {
-//                 video.src = CompatibleURL.createObjectURL(stream);
-                video.srcObject = stream;
+                video.src = CompatibleURL.createObjectURL(stream);
+//                 video.srcObject = stream;
             } catch (e) {
                 alert("访问用户媒体设备失败：", error.name, error.message);
             }
-
+            alert(video.src);
             video.play();//播放视频
 
             //将视频绘制到canvas上
