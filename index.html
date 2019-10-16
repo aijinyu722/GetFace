@@ -77,7 +77,7 @@
         }
         function openUserMedia() {
             if ((navigator.mediaDevices && navigator.mediaDevices.getUserMedia) || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.getUserMedia) {
-                getUserMediaToPhoto({ video: { width: 480, height: 320, facingMode: "user" } }, success, error);
+                getUserMediaToPhoto({ video: { width: 320, height: 240, facingMode: "user" } }, success, error);
             } else {
                 alert('你的浏览器不支持访问用户媒体设备');
             }
