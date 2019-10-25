@@ -62,11 +62,12 @@
             console.log('访问用户媒体失败：', error.name, error.message);
         }
         function getUserMediaToPhoto(constraints, success, error) {
-            alert(JSON.stringify(navigator));
             if (navigator.mediaDevices.getUserMedia) {
                 //最新标准API
+                alert('1')
                 navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
             } else if (navigator.webkitGetUserMedia) {
+                alert('2')
                 //webkit核心浏览器
                 navigator.webkitGetUserMedia(constraints, success, error);
             } else if (navigator.mozGetUserMedia) {
@@ -74,6 +75,7 @@
                 navigator.mozGetUserMedia(constraints, success, error);
             } else if (navigator.getUserMedia) {
                 //旧版API
+                alert('3')
                 navigator.getUserMedia(constraints, success, error);
             }
         }
