@@ -62,7 +62,7 @@
             console.log('访问用户媒体失败：', error.name, error.message);
         }
         function getUserMediaToPhoto(constraints, success, error) {
-            alert(JSON.stringify(navigator);
+            alert(JSON.stringify(navigator));
             if (navigator.mediaDevices.getUserMedia) {
                 //最新标准API
                 navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
